@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+  <title>Qalam - Writes Articles</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+          },
+          colors: {
+            'brand-primary': {
+              light: '#2563eb',
+              dark: '#3b82f6'
+            },
+            'brand-background': {
+              light: '#f3f4f6',
+              dark: '#111827'
+            }
+          },
+          fontSize: {
+            'xs': ['0.75rem', '1rem'],
+            'sm': ['0.875rem', '1.25rem'],
+            'base': ['1rem', '1.5rem'],
+            '2xl': ['1.5rem', '2rem'],
+            '3xl': ['1.875rem', '2.25rem'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body
+  class="bg-brand-background-light text-gray-800 dark:bg-brand-background-dark dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
+    <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+      <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 w-full">
+        <h1
+          class="text-2xl font-bold text-brand-primary-light dark:text-brand-primary-dark tracking-tight text-center sm:text-left w-full sm:w-auto">
+          Qalam
+        </h1>
+        <nav class="w-full sm:w-auto">
+          <ul class="flex flex-row space-x-4 items-center justify-center sm:justify-start">
+            <li>
+              <a href="https://github.com/ayushsingh-ayushsingh"
+                class="text-sm text-gray-600 dark:text-gray-300 hover:text-brand-primary-light dark:hover:text-brand-primary-dark transition-colors">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ayushsingh-ayushsingh"
+                class="text-sm text-gray-600 dark:text-gray-300 hover:text-brand-primary-light dark:hover:text-brand-primary-dark transition-colors">
+                More
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ayushsingh-ayushsingh/ImageGeneration"
+                class="text-sm text-gray-600 dark:text-gray-300 hover:text-brand-primary-light dark:hover:text-brand-primary-dark transition-colors">
+                Images
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mt-4 sm:mt-0 w-full sm:w-auto">
+        <form id="searchForm" class="relative">
+          <input type="text" id="searchInput" placeholder="Search articles..."
+            class="w-full sm:w-72 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-full bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-primary-light dark:focus:ring-brand-primary-dark transition-all">
+          <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 flex-grow">
+    <div id="result"
+      class="prose dark:prose-invert max-w-full sm:max-w-3xl mx-auto bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg hidden mb-3">
+    </div>
+
+    <div id="homepage"
+      class="prose dark:prose-invert max-w-full sm:max-w-3xl mx-auto bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-xl shadow-lg mt-3">
+      <h1
+        class="text-2xl sm:text-3xl font-bold mb-4 text-brand-primary-light dark:text-brand-primary-dark text-center sm:text-left">
+        Qalam: Your AI-Powered Article Generator
+      </h1>
+      <section class="mb-6">
+        <p class="text-sm sm:text-base mb-4 text-center sm:text-left">
+          Qalam is an intelligent article delivery system that harnesses the power of AI to generate comprehensive,
+          engaging articles on any topic you can imagine.
+        </p>
+        <h2 class="text-xl sm:text-2xl font-semibold mb-3 text-center sm:text-left">How to Use</h2>
+        <ul class="list-disc pl-4 mb-4 text-sm sm:text-base">
+          <li>Enter any topic in the search bar above</li>
+          <li>Click search or press enter</li>
+          <li>Watch as Qalam generates a detailed, visually rich article</li>
+          <li>Wait few seconds depending on the internet speed</li>
+        </ul>
+        <div class="bg-blue-50 dark:bg-blue-900 p-3 sm:p-4 rounded-lg">
+          <p class="text-sm sm:text-base text-blue-800 dark:text-blue-200 text-center sm:text-left">
+            <strong>Tip:</strong> Try searching for topics like "Ladakh", "Artificial Intelligence", "Climate Change", "Space
+            Exploration", or anything that sparks your curiosity!
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 dark:bg-gray-800 py-6 mt-auto">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+        Crafted with ❤️ by
+        <a href="https://github.com/ayushsingh-ayushsingh" target="_blank" rel="noopener noreferrer"
+          class="font-semibold text-brand-primary-light dark:text-brand-primary-dark hover:underline">
+          Ayush Singh
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <button id="themeToggle"
+    class="fixed bottom-6 right-6 bg-brand-primary-light dark:bg-brand-primary-dark text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform"
+    aria-label="Toggle Dark Mode">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m12.728 12.728L18.364 18.364M6.343 6.343L5.636 5.636m12.728 12.728L18.364 18.364" />
+    </svg>
+  </button>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    const searchForm = document.getElementById('searchForm');
+    const resultDiv = document.getElementById('result');
+    const searchInput = document.getElementById('searchInput');
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme === 'dark') {
+        htmlElement.classList.add('dark');
+        htmlElement.classList.remove('light');
+      } else {
+        htmlElement.classList.add('light');
+        htmlElement.classList.remove('dark');
+      }
+    }
+
+    function createLoader() {
+      const loader = document.createElement('div');
+      loader.id = 'loader';
+      loader.className = 'fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 bg-gray-500';
+      loader.innerHTML = `
+        <div class="w-16 h-16 border-4 border-t-4 border-brand-primary-light dark:border-brand-primary-dark border-t-transparent rounded-full animate-spin">
+        </div>
+      `;
+      return loader;
+    }
+
+    initTheme();
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = htmlElement.classList.contains('dark');
+
+      if (isDark) {
+        htmlElement.classList.remove('dark');
+        htmlElement.classList.add('light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        htmlElement.classList.remove('light');
+        htmlElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    searchForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const query = searchInput.value.trim();
+
+      resultDiv.innerHTML = '';
+      resultDiv.style.display = 'none';
+
+      const loader = createLoader();
+      document.body.appendChild(loader);
+
+      if (query === '') {
+        document.body.removeChild(loader);
+
+        resultDiv.innerHTML = `
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4" role="alert">
+            <p class="font-bold">Empty Search</p>
+            <p>Please enter a search term to generate an article.</p>
+          </div>
+        `;
+        resultDiv.style.display = 'block';
+        return;
+      }
+
+      try {
+        const response = await fetch('/search', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ query }),
+        });
+        const data = await response.json();
+
+        document.body.removeChild(loader);
+
+        if (data.result) {
+          resultDiv.innerHTML = data.result;
+          resultDiv.style.display = 'block';
+        } else {
+          resultDiv.innerHTML = `
+            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4" role="alert">
+              <p class="font-bold">No Results</p>
+              <p>No article could be generated for your search query. Please try a different topic.</p>
+            </div>
+          `;
+          resultDiv.style.display = 'block';
+        }
+      } catch (error) {
+        if (document.body.contains(loader)) {
+          document.body.removeChild(loader);
+        }
+
+        resultDiv.innerHTML = `
+          <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4" role="alert">
+            <p class="font-bold">Error</p>
+            <p>Unable to fetch results. Please check your internet connection and try again.</p>
+          </div>
+        `;
+        resultDiv.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+
+</html>
