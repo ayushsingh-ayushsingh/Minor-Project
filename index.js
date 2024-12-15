@@ -9,7 +9,8 @@ import axios from 'axios';
 
 dotenv.config();
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+// const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const groq = new Groq({ apiKey: "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" });
 const AIRFORCE_BASE_URL = 'https://api.airforce';
 
 const app = express();
