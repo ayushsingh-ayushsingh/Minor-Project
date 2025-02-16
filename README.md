@@ -21,7 +21,9 @@ Welcome to **Qalam**, an intelligent article delivery system that leverages the 
 **Tip**: Try searching for topics like "Ladakh", "Artificial Intelligence", "Climate Change", "Space Exploration", or anything that piques your interest!
 
 ## Screenshots and Images
-![Screenshot](./Screenshot(69).png)
+![Qalam Screenshot 1](https://raw.githubusercontent.com/ayushsingh-ayushsingh/Minor-Project/refs/heads/main/Screenshot%202025-02-16%20132637.png)
+![Qalam Screenshot 2](https://raw.githubusercontent.com/ayushsingh-ayushsingh/Minor-Project/refs/heads/main/Screenshot%20(69).png)
+![Qalam Screenshot 3](https://raw.githubusercontent.com/ayushsingh-ayushsingh/Minor-Project/refs/heads/main/Screenshot%20(70).png)
 
 ## Getting Started
 
