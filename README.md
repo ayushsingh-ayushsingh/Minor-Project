@@ -20,6 +20,9 @@ Welcome to **Qalam**, an intelligent article delivery system that leverages the 
 
 **Tip**: Try searching for topics like "Ladakh", "Artificial Intelligence", "Climate Change", "Space Exploration", or anything that piques your interest!
 
+## Screenshots and Images
+![Screenshot](./Screenshot(69).png)
+
 ## Getting Started
 
 To get started with Qalam, simply visit our platform and begin exploring the vast array of topics available. No installation or setup is required.
